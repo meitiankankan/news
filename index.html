@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态新闻网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📰 每日新闻</h1>
+            <p class="subtitle">每日60秒读懂世界</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>加载新闻中...</p>
+        </div>
+
+        <div id="error" class="error" style="display: none;">
+            <p>⚠️ 加载失败，请稍后重试</p>
+            <button onclick="loadNews()">重新加载</button>
+        </div>
+
+        <div id="news-container" class="news-grid"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>数据来源: api.suxun.site | 最后更新: <span id="update-time"></span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
